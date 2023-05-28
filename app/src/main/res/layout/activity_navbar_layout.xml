@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!-- Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <!-- Logo Icon -->
+        <Button
+            android:id="@+id/logo_icon"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/logo" />
+
+        <!-- Spacer -->
+
+        <!-- Vector 1 -->
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="24dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/vectorback_arrow_vector" />
+
+        <!-- Vector 2 -->
+        <Button
+            android:id="@+id/settings_btn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center_vertical|end"
+            android:background="@drawable/vectorsettings_vector" />
+
+    </LinearLayout>
+</RelativeLayout>

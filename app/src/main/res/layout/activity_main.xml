@@ -19,39 +19,10 @@
         android:id="@+id/navigation_bar"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:background="@color/white"
-        android:orientation="horizontal">
+        android:orientation="horizontal"/>
 
-        <!-- Logo Icon -->
-        <ImageView
-            android:id="@+id/logo_icon"
-            android:layout_width="56dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/logo" />
 
-        <!-- Spacer -->
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
 
-        <!-- Vector 1 -->
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginRight="10dp"
-            android:layout_gravity="center_vertical|end"
-            android:src="@drawable/vectorback_arrow_vector" />
-
-        <!-- Vector 2 -->
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginRight="10dp"
-            android:layout_gravity="center_vertical|end"
-            android:src="@drawable/vectorsettings_vector" />
-
-    </LinearLayout>
 
 <LinearLayout
     android:layout_width="wrap_content"
@@ -87,8 +58,19 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <Button
+                    android:id="@+id/button_choose_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent">
+
+                </Button>
             <!-- Item 1 -->
             <LinearLayout
+                android:id="@+id/linear_horizontal_category"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -96,6 +78,7 @@
 
                 <!-- Vector 1 -->
                 <ImageView
+                    android:id="@+id/vector_category"
                     android:layout_width="95dp"
                     android:layout_height="match_parent"
                     android:scaleType="center"
@@ -103,6 +86,7 @@
 
                 <!-- Text 1 -->
                 <TextView
+                    android:id="@+id/text_category"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -112,14 +96,17 @@
 
                 <!-- Image 1 -->
                 <ImageView
+
                     android:layout_width="169dp"
                     android:layout_height="159dp"
                     android:scaleType="fitStart"
                     android:src="@drawable/provoles"
                     android:layout_marginTop="30dp"/>
 
-            </LinearLayout>
 
+
+            </LinearLayout>
+            </FrameLayout>
             <!-- Item 2 -->
             <LinearLayout
                 android:layout_width="match_parent"

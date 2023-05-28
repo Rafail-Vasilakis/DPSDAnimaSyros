@@ -3,4 +3,14 @@
     <string name="some_id">
 \u00CE\u00A0\u00CF\u0081\u00CE\u00BF\u00CE\u00B2\u00CE\u00BF\u00CE\u00BB\u00CE\u00AD\u00CF\u0082
 </string>
+
+    <string-array name="days">
+        <item>Δευτέρα 29/5</item>
+        <item>Τρίτη 30/5</item>
+        <item>Τετάρτη 31/5</item>
+        <item>Πέμπτη 1/6</item>
+        <item>Παρασκευή 2/6</item>
+        <item>Σάββατο 3/6</item>
+        <item>Κυριακή 4/6</item>
+    </string-array>
 </resources>

@@ -1,39 +1,22 @@
 package com.example.dpsdanimasyros;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Spinner;
-import android.widget.TextView;
-
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class CategoryActivity extends AppCompatActivity {
-
-    private Button buttoninformation;
+public class InformationProgramActivity  extends AppCompatActivity {
 
     private Button logobutton;
     private Button backButton;
-
     private Button settingsbutton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_choose_category_layout);
-
-        Spinner spinnerLanguages = findViewById(R.id.spinner);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.days, R.layout.spinner_layout);
-        adapter.setDropDownViewResource(R.layout.spinner_dropdown_layout);
-        spinnerLanguages.setAdapter(adapter);
+        setContentView(R.layout.information_program_layout);
 
         LinearLayout navigationBar = findViewById(R.id.navigation_bar);
 
@@ -46,26 +29,15 @@ public class CategoryActivity extends AppCompatActivity {
 // Add the new layout to the LinearLayout
         navigationBar.addView(newLayout);
 
-
-
-        buttoninformation = (Button) findViewById(R.id.button_info);
-        buttoninformation.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(CategoryActivity.this, InformationProgramActivity.class);
-                startActivity(intent);
-
-            }
-        });
-
         logobutton = findViewById(R.id.logo_icon);
         logobutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(CategoryActivity.this, MainActivity.class);
+                Intent intent = new Intent(InformationProgramActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
+
         backButton = findViewById(R.id.back_button);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,12 +50,13 @@ public class CategoryActivity extends AppCompatActivity {
         settingsbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(CategoryActivity.this, SettingsActivity.class);
+                Intent intent = new Intent(InformationProgramActivity.this, SettingsActivity.class);
                 startActivity(intent);
             }
         });
 
+
     }
+
+
 }
-
-
