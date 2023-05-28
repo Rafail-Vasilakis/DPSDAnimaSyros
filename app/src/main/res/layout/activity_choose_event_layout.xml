@@ -1,0 +1,164 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/main_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/b2" />
+
+    <!-- Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <!-- Logo Icon -->
+        <ImageView
+            android:id="@+id/logo_icon"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/logo" />
+
+        <!-- Spacer -->
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <!-- Vector 1 -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center_vertical|end"
+            android:src="@drawable/vectorback_arrow_vector" />
+
+        <!-- Vector 2 -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center_vertical|end"
+            android:src="@drawable/vectorsettings_vector" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/navigation_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Morning Program -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <!-- Vector 1 -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/vectorprovoles" />
+
+                <!-- Text 1 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Morning Program"
+                    android:textSize="16sp"
+                    android:layout_marginStart="16dp"
+                    android:textAppearance="@style/some_id" />
+
+                <!-- Dropdown menu 1 -->
+                <ImageView
+                    android:layout_width="500dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/firstevent"
+                    android:layout_marginStart="8dp" />
+
+            </LinearLayout>
+
+            <!-- Noon Program -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <!-- Vector 2 -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/vectorfav_vector" />
+
+                <!-- Text 2 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Noon Program"
+                    android:textSize="16sp"
+                    android:layout_marginStart="16dp" />
+
+                <!-- Dropdown menu 2 -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/vectorfav_vector"
+                    android:layout_marginStart="8dp" />
+
+            </LinearLayout>
+
+            <!-- Night Program -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <!-- Vector 3 -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/vectorback_arrow_vector" />
+
+                <!-- Text 3 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Night Program"
+                    android:textSize="16sp"
+                    android:layout_marginStart="16dp" />
+
+                <!-- Dropdown menu 3 -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/vectorsettings_vector"
+                    android:layout_marginStart="8dp" />
+
+            </LinearLayout>
+
+            <!-- Add more programs as needed -->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

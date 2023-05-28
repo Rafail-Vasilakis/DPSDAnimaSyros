@@ -1,0 +1,259 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/main_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/b7" />
+
+    <!-- Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <!-- Logo Icon -->
+        <ImageView
+            android:id="@+id/logo_icon"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/logo" />
+
+        <!-- Spacer -->
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <!-- Vector 1 -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center_vertical|end"
+            android:src="@drawable/vectorback_arrow_vector" />
+
+        <!-- Vector 2 -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center_vertical|end"
+            android:src="@drawable/vectorsettings_vector" />
+
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_below="@id/navigation_bar">
+    <ImageView
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+        android:layout_below="@id/navigation_bar"
+   android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+    android:src="@drawable/vectorfav_vector" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_marginStart="5dp"
+        android:text="Αγαπημένα"
+        android:textAppearance="@style/some_id" />
+
+</LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/navigation_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Item 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <!-- Vector 1 -->
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="center"
+                    android:src="@drawable/vectorprovoles" />
+
+                <!-- Text 1 -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Προβολές"
+                    android:textAppearance="@style/some_id" />
+
+                <!-- Image 1 -->
+                <ImageView
+                    android:layout_width="169dp"
+                    android:layout_height="159dp"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/provoles"
+                    android:layout_marginTop="30dp"/>
+
+            </LinearLayout>
+
+            <!-- Item 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <!-- Vector 2 -->
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="center"
+                    android:src="@drawable/vectoragora" />
+
+                <!-- Text 2 -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Aγορά"
+                    android:textAppearance="@style/some_id" />
+
+                <!-- Image 2 -->
+                <ImageView
+                    android:layout_width="169dp"
+                    android:layout_height="159dp"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/agora"
+                    android:layout_marginTop="30dp"/>
+
+            </LinearLayout>
+
+            <!-- Item 3 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <!-- Vector 3 -->
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="center"
+                    android:src="@drawable/carbon_educationekp_prog_vector" />
+
+                <!-- Text 3 -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Εκπαιδευτικά Προγράμματα"
+                    android:textAppearance="@style/some_id" />
+
+                <!-- Image 3 -->
+                <ImageView
+                    android:layout_width="169dp"
+                    android:layout_height="159dp"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/ekp_prog"
+                    android:layout_marginTop="30dp"/>
+
+            </LinearLayout>
+
+            <!-- Item 4 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <!-- Vector 4 -->
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="center"
+                    android:src="@drawable/ekd_vector" />
+
+                <!-- Text 4 -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Παράλληλες Εκδηλώσεις"
+                    android:textAppearance="@style/some_id" />
+
+                <!-- Image 4 -->
+                <ImageView
+                    android:layout_width="169dp"
+                    android:layout_height="159dp"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/par_ekd"
+                    android:layout_marginTop="30dp"/>
+
+            </LinearLayout>
+
+            <!-- Item 5 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <!-- Vector 5 -->
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="center"
+                    android:src="@drawable/vectorxartis_erm" />
+
+                <!-- Text 5 -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Χαρτης Ερμούπολης"
+                    android:textAppearance="@style/some_id" />
+
+                <!-- Image 5 -->
+                <ImageView
+                    android:layout_width="169dp"
+                    android:layout_height="159dp"
+                    android:layout_marginTop="30dp"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/xartis_erm" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
