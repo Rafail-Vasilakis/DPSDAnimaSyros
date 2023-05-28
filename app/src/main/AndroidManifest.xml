@@ -25,7 +25,7 @@
         <activity android:name=".InformationProgramActivity" />
         <activity android:name=".CategoryActivity" />
         <activity android:name=".DirectionsActivity" />
-
+        <activity android:name=".Terms_Activity" />
     </application>
 
 </manifest>
