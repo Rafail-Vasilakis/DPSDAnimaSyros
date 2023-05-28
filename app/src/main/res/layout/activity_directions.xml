@@ -1,95 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_intro"
+    android:background="@color/white"
     android:id="@+id/relativelayout"
-    android:padding="24dp">
+    android:padding="0dp">
 
-
-
-
-    <TextView
-        android:id="@+id/information"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/linear_layout"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:text="ΠΛΗΡΟΦΟΡΙΕΣ"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="30dp"
-        android:textStyle="bold" />
-    <LinearLayout
-        android:id="@+id/linear_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:orientation="vertical">
+        android:layout_height="match_parent" />
 
-
-        <TextView
-            android:id="@+id/first_info1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:text="H είσοδος σε όλες τις δράσεις του Φεστιβάλ είναι δωρεάν."
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="24dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/first_info2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:text="Η ηλεκτρονική κράτηση θέσης, μέσω του Εventbrite είναι απαραίτητη για τις προβολέςστο Θέατρο Απόλλων."
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="24dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/first_info3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:text="Tο πωλητήριο του Φεστιβάλ βρίσκεται στο Θέατρο Απόλλων."
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="24dp"
-            android:textStyle="bold" />
-
-
-
-    </LinearLayout>
-
-
-    <ImageView
-        android:id="@+id/position_dots"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="600dp"
-        android:layout_marginBottom="5dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/dotsposition_marks" />
-
-
-
+    
 </RelativeLayout>

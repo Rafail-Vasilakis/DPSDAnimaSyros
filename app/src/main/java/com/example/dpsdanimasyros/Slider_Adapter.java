@@ -30,7 +30,7 @@ public class Slider_Adapter extends RecyclerView.Adapter<Slider_Adapter.OnBoardi
     public OnBoardingViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new OnBoardingViewHolder(
                 LayoutInflater.from(parent.getContext()).inflate(
-                       R.layout.activity_directions, parent, false
+                       R.layout.activity_direction_layout, parent, false
                 )
         );
     }

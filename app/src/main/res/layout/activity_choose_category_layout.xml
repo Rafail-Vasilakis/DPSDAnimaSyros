@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <ImageView
         android:id="@+id/main_background"
         android:layout_width="match_parent"
@@ -52,6 +53,8 @@
             android:layout_gravity="center_vertical|end"
             android:src="@drawable/vectorsettings_vector" />
 
+
+
     </LinearLayout>
 
     <ScrollView
@@ -64,6 +67,46 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <!-- CategoryLayout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/vectorprovoles" />
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent" />
+                <!-- Text 1 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Προβολές"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20dp"
+                    android:textAppearance="@style/some_id" />
+
+                <!-- Dropdown menu 1 -->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/downarrow"
+                    android:layout_marginStart="20dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Κυριακή 28/5"
+                    android:textSize="20dp"
+                    android:textAppearance="@style/some_id" />
+
+            </LinearLayout>
+
             <!-- Morning Program -->
             <LinearLayout
                 android:layout_width="match_parent"
@@ -71,91 +114,31 @@
                 android:orientation="horizontal"
                 android:padding="16dp">
 
-                <!-- Vector 1 -->
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/vectorprovoles" />
-
-                <!-- Text 1 -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Morning Program"
-                    android:textSize="16sp"
-                    android:layout_marginStart="16dp"
-                    android:textAppearance="@style/some_id" />
-
-                <!-- Dropdown menu 1 -->
-                <ImageView
-                    android:layout_width="500dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/firstevent"
-                    android:layout_marginStart="8dp" />
-
-            </LinearLayout>
-
-            <!-- Noon Program -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="16dp">
-
-                <!-- Vector 2 -->
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/vectorfav_vector" />
-
                 <!-- Text 2 -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Noon Program"
-                    android:textSize="16sp"
-                    android:layout_marginStart="16dp" />
-
-                <!-- Dropdown menu 2 -->
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/vectorfav_vector"
-                    android:layout_marginStart="8dp" />
-
+                    android:text="Πρωί:"
+                    android:textSize="20dp"
+                    android:textAppearance="@style/some_id" />
             </LinearLayout>
 
-            <!-- Night Program -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="16dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
 
-                <!-- Vector 3 -->
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/vectorback_arrow_vector" />
+            <ImageView
+                android:id="@+id/imagecategory"
+                android:layout_width="340dp"
+                android:layout_height="136dp"
+                android:background="@drawable/rounded_image"
+                android:scaleType="centerCrop"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/firstcategoryphoto"/>
 
-                <!-- Text 3 -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Night Program"
-                    android:textSize="16sp"
-                    android:layout_marginStart="16dp" />
-
-                <!-- Dropdown menu 3 -->
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/vectorsettings_vector"
-                    android:layout_marginStart="8dp" />
-
-            </LinearLayout>
-
-            <!-- Add more programs as needed -->
+        </LinearLayout>
 
         </LinearLayout>
 

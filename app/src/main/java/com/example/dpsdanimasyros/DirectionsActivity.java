@@ -8,14 +8,14 @@ import androidx.viewpager2.widget.ViewPager2;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Home_Screen extends AppCompatActivity {
+public class DirectionsActivity extends AppCompatActivity {
     private Slider_Adapter sliderAdapter;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_directions);
 
         setupOnBoardingItems();
 
