@@ -13,6 +13,8 @@ public class InformationProgramActivity  extends AppCompatActivity {
     private Button logobutton;
     private Button backButton;
     private Button settingsbutton;
+
+    private Button add_fav;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +57,15 @@ public class InformationProgramActivity  extends AppCompatActivity {
             }
         });
 
+
+        add_fav = findViewById(R.id.add_fav_btn);
+        add_fav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(InformationProgramActivity.this, FavoritesActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 

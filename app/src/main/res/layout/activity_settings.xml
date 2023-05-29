@@ -279,7 +279,6 @@
         android:padding="5dp">
 
         <Button
-            android:id="@+id/add_account_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Προσθήκη λογαριασμό"
@@ -288,6 +287,14 @@
             android:background="@color/transparent"
             android:textAppearance="@style/some_id"
             android:textColor="@color/blue"/>
+
+        <Button
+            android:id="@+id/add_account_btn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/rightarrow"
+            android:layout_marginLeft="90dp"
+            android:paddingTop="10dp"/>
     </LinearLayout>
     <!-- Log Out Account -->
     <LinearLayout android:layout_width="match_parent"
@@ -295,7 +302,6 @@
         android:orientation="horizontal"
         android:padding="5dp">
         <Button
-            android:id="@+id/button_log_out_account"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Αποσύνδεση λογαριασμού"
@@ -304,6 +310,14 @@
             android:background="@color/transparent"
             android:textAppearance="@style/some_id"
             android:textColor="@color/red"/>
+
+        <Button
+            android:id="@+id/button_log_out_account"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/rightarrow"
+            android:layout_marginLeft="57dp"
+            android:paddingTop="10dp"/>
     </LinearLayout>
     <!-- Log Out All Accounts -->
     <LinearLayout android:layout_width="match_parent"
@@ -321,6 +335,7 @@
             android:textAppearance="@style/some_id"
             android:padding="10dp"
             android:textColor="@color/red"/>
+
     </LinearLayout>
 
 </LinearLayout>

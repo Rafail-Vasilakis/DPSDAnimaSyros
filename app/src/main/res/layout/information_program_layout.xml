@@ -36,9 +36,9 @@
 
 
                 <FrameLayout
-                    android:layout_width="340dp"
-                    android:layout_height="136dp"
-                    android:layout_marginStart="15dp">
+                    android:id="@+id/frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="136dp">
 
                     <ImageView
                         android:id="@+id/imagecategory"
@@ -60,7 +60,6 @@
 
 
 
-
                 </FrameLayout>
             <ScrollView
                 android:layout_width="match_parent"
@@ -73,10 +72,22 @@
                 android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rhoncus eget risus molestie commodo. In dui orci, interdum vitae turpis vel, ornare commodo metus. Cras semper, neque vitae dignissim maximus, magna eros auctor est, eu egestas purus dolor at quam. Nullam molestie tellus eu mauris scelerisque hendrerit. Fusce molestie euismod mauris rutrum finibus. Etiam id erat lacus. Praesent non tincidunt nunc. Maecenas vitae dolor placerat, fermentum sem non, consectetur purus."
                 android:textAppearance="@style/some_id"/>
             </ScrollView>
+
+
             </LinearLayout>
 
-
-
     </ScrollView>
+
+    <Button
+        android:id="@+id/add_fav_btn"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="350dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="91dp"
+        android:layout_marginBottom="616dp"
+        android:background="@drawable/purplestar"
+        android:rotation="120" />
+
 
 </RelativeLayout>
