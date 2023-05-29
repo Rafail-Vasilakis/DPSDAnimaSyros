@@ -11,6 +11,8 @@ import android.widget.LinearLayout;
 public class MainActivity extends AppCompatActivity {
 
     private Button button;
+
+    private Button fav_btn;
     private Button logobutton;
     private Button backButton;
     private Button settingsbutton;
@@ -40,6 +42,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        fav_btn = findViewById(R.id.favbtn);
+        fav_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, FavoritesActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         logobutton = findViewById(R.id.logo_icon);
         logobutton.setOnClickListener(new View.OnClickListener() {

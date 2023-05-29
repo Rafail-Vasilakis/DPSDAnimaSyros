@@ -14,6 +14,32 @@
         android:scaleType="centerCrop"
         android:src="@drawable/b7" />
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/navigation_bar">
+        <Button
+            android:id="@+id/favbtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/navigation_bar"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/vectorfav_vector"
+            android:layout_weight="5"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginStart="5dp"
+            android:text="Αγαπημένα"
+            android:textAppearance="@style/some_id" />
+
+    </LinearLayout>
+
     <!-- Navigation Bar -->
     <LinearLayout
         android:id="@+id/navigation_bar"
@@ -24,29 +50,7 @@
 
 
 
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:layout_below="@id/navigation_bar">
-    <ImageView
-    android:layout_width="50dp"
-    android:layout_height="50dp"
-        android:layout_below="@id/navigation_bar"
-   android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-    android:src="@drawable/vectorfav_vector" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:layout_marginStart="5dp"
-        android:text="Αγαπημένα"
-        android:textAppearance="@style/some_id" />
-
-</LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -60,14 +64,8 @@
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <Button
-                    android:id="@+id/button_choose_category"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/transparent">
+                android:layout_height="wrap_content">
 
-                </Button>
             <!-- Item 1 -->
             <LinearLayout
                 android:id="@+id/linear_horizontal_category"
@@ -79,9 +77,9 @@
                 <!-- Vector 1 -->
                 <ImageView
                     android:id="@+id/vector_category"
-                    android:layout_width="95dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:scaleType="center"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/vectorprovoles" />
 
                 <!-- Text 1 -->
@@ -95,12 +93,12 @@
                     android:textAppearance="@style/some_id" />
 
                 <!-- Image 1 -->
-                <ImageView
-
+                <Button
+                    android:id="@+id/button_choose_category"
                     android:layout_width="169dp"
                     android:layout_height="159dp"
                     android:scaleType="fitStart"
-                    android:src="@drawable/provoles"
+                    android:background="@drawable/provoles"
                     android:layout_marginTop="30dp"/>
 
 

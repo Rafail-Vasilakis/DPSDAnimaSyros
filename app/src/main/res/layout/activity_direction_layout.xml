@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/background_intro"
     android:id="@+id/relativelayout"
-    android:padding="24dp">
+    android:padding="0dp">
 
 
 
@@ -14,7 +14,6 @@
         android:id="@+id/information"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/linear_layout"
         android:layout_alignParentTop="true"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
@@ -25,7 +24,7 @@
         android:textSize="30dp"
         android:textStyle="bold" />
     <LinearLayout
-        android:id="@+id/linear_layout"
+        android:id="@+id/linear_layout_directions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -81,13 +80,12 @@
 
     <ImageView
         android:id="@+id/position_dots"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="600dp"
-        android:layout_marginBottom="5dp"
-        android:scaleType="fitCenter"
+        android:layout_alignStart="@id/linear_layout_directions"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
         android:src="@drawable/dotsposition_marks" />
 
 

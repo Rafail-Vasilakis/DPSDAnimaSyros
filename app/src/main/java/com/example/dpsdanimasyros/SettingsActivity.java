@@ -29,6 +29,8 @@ public class SettingsActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(R.layout.spinner_dropdown_layout);
         spinnerLanguages.setAdapter(adapter);
 
+
+
         backButton = findViewById(R.id.back_button);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,13 +65,7 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
 
-            shareButton = findViewById(R.id.button_share);
-            shareButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    // Handle share button click
-                }
-            });
+
 
             removeAdsButton = findViewById(R.id.button_remove_ads);
             removeAdsButton.setOnClickListener(new View.OnClickListener() {

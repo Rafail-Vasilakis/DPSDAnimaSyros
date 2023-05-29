@@ -21,4 +21,10 @@
         <item>Γαλλικά</item>
         <item>Ιαπωνικά</item>
     </string-array>
+
+    <string-array name="share">
+        <item>Facebook</item>
+        <item>Instagram</item>
+        <item>Twitter</item>
+    </string-array>
 </resources>

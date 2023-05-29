@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".IntroActivity">
+    tools:context=".FavoritesActivity">
 
 
     <ImageView
@@ -30,10 +30,50 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:orientation="vertical">
 
+            <!-- CategoryLayout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
 
+                <!-- Text 1 -->
+                <TextView
+                    android:id="@+id/nameofcategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Αγαπημένα"
+                    android:textSize="20dp"
+                    android:layout_marginTop="10dp"
+                    android:textAppearance="@style/some_id"
+                    android:layout_marginLeft="145dp"/>
+
+            </LinearLayout>
+
+            <!-- Morning Program -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <!-- Text 2 -->
+                <TextView
+                    android:id="@+id/texttime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Πρωί:"
+                    android:textSize="20dp"
+                    android:textAppearance="@style/some_id" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
 
                 <FrameLayout
                     android:layout_width="340dp"
@@ -58,24 +98,20 @@
                         android:textColor="@color/black"
                         android:textSize="20dp" />
 
-
-
+                    <Button
+                        android:id="@+id/button_info"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="290dp"
+                        android:layout_marginTop="86dp"
+                        android:background="@drawable/info"
+                        android:onClick="infoButtonClick" />
 
                 </FrameLayout>
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="70dp">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rhoncus eget risus molestie commodo. In dui orci, interdum vitae turpis vel, ornare commodo metus. Cras semper, neque vitae dignissim maximus, magna eros auctor est, eu egestas purus dolor at quam. Nullam molestie tellus eu mauris scelerisque hendrerit. Fusce molestie euismod mauris rutrum finibus. Etiam id erat lacus. Praesent non tincidunt nunc. Maecenas vitae dolor placerat, fermentum sem non, consectetur purus."
-                android:textAppearance="@style/some_id"/>
-            </ScrollView>
+
             </LinearLayout>
 
-
+        </LinearLayout>
 
     </ScrollView>
 
