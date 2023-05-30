@@ -15,6 +15,13 @@ import android.widget.TextView;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.dpsdanimasyros.adapterclass.ThemesAdapter;
+import com.example.dpsdanimasyros.model.ThemeModel;
+
+import java.util.ArrayList;
 
 public class CategoryActivity extends AppCompatActivity {
 
@@ -24,6 +31,11 @@ public class CategoryActivity extends AppCompatActivity {
     private Button backButton;
 
     private Button settingsbutton;
+
+    private final ArrayList<ThemeModel> themeModels = new ArrayList<>();
+    RecyclerView recyclerView;
+
+    Button show_favorite_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,16 +59,6 @@ public class CategoryActivity extends AppCompatActivity {
         navigationBar.addView(newLayout);
 
 
-
-        buttoninformation = (Button) findViewById(R.id.button_info);
-        buttoninformation.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(CategoryActivity.this, InformationProgramActivity.class);
-                startActivity(intent);
-
-            }
-        });
 
         logobutton = findViewById(R.id.logo_icon);
         logobutton.setOnClickListener(new View.OnClickListener() {
@@ -83,10 +85,48 @@ public class CategoryActivity extends AppCompatActivity {
             }
         });
 
+        recyclerView = findViewById(R.id.recyclerviewThemes);
+        show_favorite_button = findViewById(R.id.show_fav_btn);
+        recyclerView.setHasFixedSize(true);
+        addToFavorites();
 
-
+        show_favorite_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(CategoryActivity.this,FavoritesActivity.class));
+            }
+        });
     }
 
+    public void addToFavorites()
+    {
+        recyclerView.setAdapter(new ThemesAdapter(themeModels,CategoryActivity.this));
+        recyclerView.setLayoutManager(new GridLayoutManager(CategoryActivity.this,1));
+
+        themeModels.add(new ThemeModel(R.drawable.firstcategoryphoto,"10:00 \n" +
+                "Σχολική Προβολή στο \n" +
+                "Θέατρο Απόλλων","theme1"));
+        themeModels.add(new ThemeModel(R.drawable.secondevent,"16:00 \n" +
+                "Προβλές ταινιών διαγωνισμού ANIMEGARON","theme2"));
+        themeModels.add(new ThemeModel(R.drawable.thirdevent,"16:20 \n" +
+                "Διεθνές Πανόραμα","theme3"));
+        themeModels.add(new ThemeModel(R.drawable.fourthevent,"18:15 \n" +
+                "       Αφιέρωμα \n" +
+                "Norway Calling","theme4"));
+        themeModels.add(new ThemeModel(R.drawable.fifthevent,"19:30 \n" +
+                "Τηλεοπτικές & κατα παραγγελία ταινίες","theme5"));
+        themeModels.add(new ThemeModel(R.drawable.sixthevent,"20:45 \n" +
+                "Αφιέρωμα Stand with Ukraine","theme6"));
+        themeModels.add(new ThemeModel(R.drawable.seventhevent,"22:15 \n" +
+                "Διαγωνιστικό Μεγάλου Μήκους-Βραβείο Κοινού","theme7"));
+    }
+
+    @Override
+    protected void onResume()
+    {
+        super.onResume();
+        addToFavorites();
+    }
 
 }
 

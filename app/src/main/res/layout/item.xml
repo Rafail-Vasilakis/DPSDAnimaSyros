@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardViewThemes"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:cardCornerRadius="8dp"
-    app:cardElevation="3dp"
+    android:layout_height="136dp"
     android:orientation="vertical"
     android:layout_marginStart="8dp"
     android:layout_marginEnd="8dp"
-    android:layout_marginTop="8dp">
+    android:layout_marginTop="50dp"
+    app:cardCornerRadius="16dp"
+    android:backgroundTint="@color/transparent">
+
 
 <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="16dp">
+        android:orientation="horizontal">
+
 
         <FrameLayout
             android:layout_width="340dp"
             android:layout_height="136dp"
-            android:layout_marginStart="15dp">
+            android:layout_marginStart="30dp">
+
 
             <ImageView
                 android:id="@+id/imageView"
@@ -37,32 +40,27 @@
                 android:layout_marginTop="30dp"
                 android:text="10:00 Σχολική Προβολή στο Θέατρο Απόλλων"
                 android:textAppearance="@style/some_id"
-                android:textColor="@color/black"
                 android:textSize="20dp" />
 
-            <Button
-                android:id="@+id/button_info"
+            <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="290dp"
                 android:layout_marginTop="86dp"
-                android:background="@drawable/info"
-                android:onClick="infoButtonClick" />
+                android:src="@drawable/info" />
 
         </FrameLayout>
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/favBtn"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="330dp"
-        android:layout_marginTop="-10dp"
-        android:layout_marginEnd="91dp"
-        android:layout_marginBottom="616dp"
-        android:background="@drawable/purplestar"
-        android:rotation="120" />
 
+    <ImageView
+        android:id="@+id/add_fav_btn"
+        android:layout_width="75dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="330dp"
+        android:layout_marginTop="-11dp"
+        android:src="@drawable/purplestar"
+        android:rotation="120" />
 
 </androidx.cardview.widget.CardView>
