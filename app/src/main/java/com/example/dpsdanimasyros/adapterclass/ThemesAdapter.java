@@ -72,13 +72,13 @@ public class ThemesAdapter extends RecyclerView.Adapter<ThemesAdapter.viewHolder
 
             }
         });
-    /*    holder.cardView.setOnClickListener(new View.OnClickListener() {
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, InformationProgramActivity.class);
                 context.startActivity(intent);
             }
-        });*/
+        });
     }
 
     @Override
