@@ -24,15 +24,12 @@
         android:layout_marginTop="0dp"
         android:orientation="horizontal" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/navigation_bar">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_below="@id/navigation_bar">
 
             <!-- CategoryLayout-->
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -96,20 +93,17 @@
                     android:textAppearance="@style/some_id" />
             </LinearLayout>
 
-
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerviewFav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_alignParentBottom="true"
+                />
 
         </LinearLayout>
-
-    </ScrollView>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerviewFav"
-        android:layout_width="match_parent"
-        android:layout_height="450dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_centerInParent="true"
-        />
 
 
 </RelativeLayout>

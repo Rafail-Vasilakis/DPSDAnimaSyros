@@ -21,18 +21,16 @@
         android:layout_height="56dp"
         android:orientation="horizontal"/>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/navigation_bar">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_below="@id/navigation_bar">
 
             <!-- CategoryLayout-->
             <LinearLayout
+                android:id="@+id/layoutview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -102,22 +100,20 @@
                     android:textAppearance="@style/some_id" />
             </LinearLayout>
 
-
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerviewThemes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_alignParentBottom="true"
+                />
 
 
         </LinearLayout>
 
-    </ScrollView>
 
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerviewThemes"
-        android:layout_width="match_parent"
-        android:layout_height="450dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerInParent="true"
-        android:layout_alignParentBottom="true"
-        />
 
 <Button
     android:id="@+id/show_fav_btn"

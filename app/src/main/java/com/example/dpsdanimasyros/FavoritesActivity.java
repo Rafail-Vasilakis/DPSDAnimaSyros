@@ -19,6 +19,10 @@ import com.example.dpsdanimasyros.model.FavoriteModel;
 import java.util.ArrayList;
 
 public class FavoritesActivity extends AppCompatActivity {
+
+    private Button logobutton;
+    private Button backButton;
+    private Button settingsbutton;
     private RecyclerView recyclerView;
     private DataBaseHelper favDB;
     private FavAdapter favAdapter;
@@ -40,6 +44,32 @@ public class FavoritesActivity extends AppCompatActivity {
 
         // Add the new layout to the LinearLayout
         navigationBar.addView(newLayout);
+
+        logobutton = findViewById(R.id.logo_icon);
+        logobutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(FavoritesActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        backButton = findViewById(R.id.back_button);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed(); // Go back to the previous activity
+            }
+        });
+
+        settingsbutton = findViewById(R.id.settings_btn);
+        settingsbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(FavoritesActivity.this, SettingsActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         recyclerView = findViewById(R.id.recyclerviewFav);
