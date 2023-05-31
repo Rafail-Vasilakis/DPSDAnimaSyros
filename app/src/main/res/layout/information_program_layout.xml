@@ -78,16 +78,6 @@
 
     </ScrollView>
 
-    <Button
-        android:id="@+id/add_fav_btn"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="350dp"
-        android:layout_marginTop="45dp"
-        android:layout_marginEnd="91dp"
-        android:layout_marginBottom="616dp"
-        android:background="@drawable/purplestar"
-        android:rotation="120" />
 
 
 </RelativeLayout>

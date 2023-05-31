@@ -58,14 +58,14 @@ public class InformationProgramActivity  extends AppCompatActivity {
         });
 
 
-        add_fav = findViewById(R.id.add_fav_btn);
+       /* add_fav = findViewById(R.id.add_fav_btn);
         add_fav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(InformationProgramActivity.this, FavoritesActivity.class);
                 startActivity(intent);
             }
-        });
+        }); */
 
     }
 
