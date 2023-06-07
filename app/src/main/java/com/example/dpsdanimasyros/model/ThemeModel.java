@@ -5,13 +5,6 @@ public class ThemeModel {
     private String Title;
     private String Key_id;
 
-
-
-    public ThemeModel()
-    {
-
-    }
-
     public ThemeModel(int image, String title, String key_id) {
         Image = image;
         Title = title;

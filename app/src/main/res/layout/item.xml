@@ -18,7 +18,9 @@
         android:orientation="horizontal">
 
 
+
         <FrameLayout
+            android:id="@+id/frame"
             android:layout_width="340dp"
             android:layout_height="136dp"
             android:layout_marginStart="30dp">
@@ -36,7 +38,7 @@
                 android:id="@+id/titleTextView"
                 android:layout_width="228dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="90dp"
+                android:layout_marginStart="95dp"
                 android:layout_marginTop="30dp"
                 android:text="10:00 Σχολική Προβολή στο Θέατρο Απόλλων"
                 android:textAppearance="@style/some_id"
@@ -65,4 +67,8 @@
         android:src="@drawable/purplestar"
         android:rotation="120" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
 </androidx.cardview.widget.CardView>

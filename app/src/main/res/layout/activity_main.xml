@@ -101,11 +101,12 @@
                     android:textAppearance="@style/some_id" />
 
                 <!-- Image 2 -->
-                <ImageView
+                <Button
+                    android:id="@+id/choose_second_cat"
                     android:layout_width="169dp"
                     android:layout_height="159dp"
                     android:scaleType="fitStart"
-                    android:src="@drawable/agora"
+                    android:background="@drawable/agora"
                     android:layout_marginTop="30dp"/>
 
             </LinearLayout>
@@ -134,11 +135,12 @@
                     android:textAppearance="@style/some_id" />
 
                 <!-- Image 3 -->
-                <ImageView
+                <Button
+                    android:id="@+id/choose_third_cat"
                     android:layout_width="169dp"
                     android:layout_height="159dp"
                     android:scaleType="fitStart"
-                    android:src="@drawable/ekp_prog"
+                    android:background="@drawable/ekp_prog"
                     android:layout_marginTop="30dp"/>
 
             </LinearLayout>
@@ -167,11 +169,12 @@
                     android:textAppearance="@style/some_id" />
 
                 <!-- Image 4 -->
-                <ImageView
+                <Button
+                    android:id="@+id/choose_fourth_cat"
                     android:layout_width="169dp"
                     android:layout_height="159dp"
                     android:scaleType="fitStart"
-                    android:src="@drawable/par_ekd"
+                    android:background="@drawable/par_ekd"
                     android:layout_marginTop="30dp"/>
 
             </LinearLayout>
@@ -200,12 +203,13 @@
                     android:textAppearance="@style/some_id" />
 
                 <!-- Image 5 -->
-                <ImageView
+                <Button
+                    android:id="@+id/choose_fifth_cat"
                     android:layout_width="169dp"
                     android:layout_height="159dp"
                     android:layout_marginTop="30dp"
                     android:scaleType="fitStart"
-                    android:src="@drawable/xartis_erm" />
+                    android:background="@drawable/xartis_erm" />
 
             </LinearLayout>
 

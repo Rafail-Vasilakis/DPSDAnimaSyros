@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -56,18 +57,6 @@ public class InformationProgramActivity  extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
-       /* add_fav = findViewById(R.id.add_fav_btn);
-        add_fav.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(InformationProgramActivity.this, FavoritesActivity.class);
-                startActivity(intent);
-            }
-        }); */
-
     }
-
 
 }

@@ -2,6 +2,7 @@ package com.example.dpsdanimasyros;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,20 +10,33 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.example.dpsdanimasyros.MainActivity;
+import com.example.dpsdanimasyros.OnBoardingItems;
+import com.example.dpsdanimasyros.R;
+import com.example.dpsdanimasyros.Slider_Adapter;
 import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import kotlin.Suppress;
-
 public class DirectionsActivity extends AppCompatActivity {
     private Slider_Adapter sliderAdapter;
     private Button buttonOnboardingAction;
+    private static final String PREFS_NAME = "MyPrefs";
+    private static final String PREFS_KEY = "onboardingShown";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        SharedPreferences preferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        boolean onboardingShown = preferences.getBoolean(PREFS_KEY, false);
+
+        if (onboardingShown) {
+            startMainActivity();
+            return;
+        }
+
         setContentView(R.layout.activity_directions);
 
         buttonOnboardingAction = findViewById(R.id.buttonOnboardingAction);
@@ -40,8 +54,8 @@ public class DirectionsActivity extends AppCompatActivity {
                 if (onboardingViewPager.getCurrentItem() + 1 < sliderAdapter.getItemCount()) {
                     onboardingViewPager.setCurrentItem(onboardingViewPager.getCurrentItem() + 1);
                 } else {
-                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                    finish();
+                    saveOnboardingShown();
+                    startMainActivity();
                 }
             }
         });
@@ -77,17 +91,28 @@ public class DirectionsActivity extends AppCompatActivity {
         onBoardingItems.add(thirdpage);
 
         sliderAdapter = new Slider_Adapter(onBoardingItems);
+
+        sliderAdapter = new Slider_Adapter(onBoardingItems);
     }
 
     @SuppressLint("SetTextI18n")
-    private void setCurrentOnboardingIndicator(int intex)
-    {
-        if(intex == sliderAdapter.getItemCount() - 1)
-        {
+    private void setCurrentOnboardingIndicator(int index) {
+        if (index == sliderAdapter.getItemCount() - 1) {
             buttonOnboardingAction.setText("Start");
-        }else
-        {
+        } else {
             buttonOnboardingAction.setText("Next");
         }
+    }
+
+    private void saveOnboardingShown() {
+        SharedPreferences preferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putBoolean(PREFS_KEY, true);
+        editor.apply();
+    }
+
+    private void startMainActivity() {
+        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+        finish();
     }
 }

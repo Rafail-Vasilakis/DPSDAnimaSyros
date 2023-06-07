@@ -39,9 +39,50 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, CategoryActivity.class);
+                intent.putExtra("ButtonPressed", 1); // Pass a value to indicate button1 was pressed
                 startActivity(intent);
             }
         });
+
+        button = findViewById(R.id.choose_second_cat);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, CategoryActivity.class);
+                intent.putExtra("ButtonPressed", 2); // Pass a value to indicate button1 was pressed
+                startActivity(intent);
+            }
+        });
+
+        button = findViewById(R.id.choose_third_cat);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, CategoryActivity.class);
+                intent.putExtra("ButtonPressed", 3); // Pass a value to indicate button1 was pressed
+                startActivity(intent);
+            }
+        });
+
+        button = findViewById(R.id.choose_fourth_cat);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, CategoryActivity.class);
+                intent.putExtra("ButtonPressed", 4); // Pass a value to indicate button1 was pressed
+                startActivity(intent);
+            }
+        });
+
+        button = findViewById(R.id.choose_fifth_cat);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, CategoryActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         fav_btn = findViewById(R.id.favbtn);
         fav_btn.setOnClickListener(new View.OnClickListener() {
