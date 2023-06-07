@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -57,6 +58,31 @@ public class InformationProgramActivity  extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // Retrieve the "ButtonPressed" value from the intent
+        int buttonPressed = getIntent().getIntExtra("ButtonPressed", -1);
+        int image = getIntent().getIntExtra("Image", -1);
+        int title = getIntent().getIntExtra("Title", -1);
+
+        // Customize the text based on the buttonPressed value
+        TextView infoTextView = findViewById(R.id.infotext);
+        ImageView imageView = findViewById(R.id.imagecategory);
+        TextView titletext = findViewById(R.id.title);
+        if (buttonPressed == 0) {
+            titletext.setText("10:00 \n Σχολική Προβολή στο  \n Θέατρο Απόλλων");
+            infoTextView.setText("Quarantine Diary (GR, 8’29”)\n Louis and Luca – Mission to the \nMoon (NO, 80’)");
+            imageView.setImageResource(R.drawable.firstcategoryphoto);
+
+        } else if (buttonPressed == 1) {
+            titletext.setText("\"16:00 \n ΠΡΟΒΟΛΈΣ ΤΑΙΝΙΩΝ \n" +
+                    "ΔΙΑΓΩΝΙΣΜΟΎ ANIMEGARON");
+            infoTextView.setText("Απολαύστε μια μοναδική εμπειρία προβολών ταινιών στο AnimeGaron! Παρέχουμε μια ευρεία γκάμα από αγαπημένες ταινίες anime, καλύπτοντας διάφορα είδη και στυλ. Ανακαλύψτε τον μαγικό κόσμο του anime και απολαύστε τις αγαπημένες σας ταινίες μαζί με άλλους λάτρεις του anime."
+
+                   + "Επιπλέον, συμμετέχετε στον διαγωνισμό AnimeGaron για να κερδίσετε μοναδικά δώρα και εμπειρίες! Μείνετε ενημερωμένοι για τις λεπτομέρειες του διαγωνισμού και δηλώστε συμμετοχή για την ευκαιρία να αποκτήσετε αξέχαστες αναμνήσεις και αντικείμενα συλλογής." +
+
+                   " Για περισσότερες πληροφορίες σχετικά με τις προβολές ταινιών και τον διαγωνισμό AnimeGaron, επισκεφθείτε την ιστοσελίδα μας ή επικοινωνήστε με την ομάδα υποστήριξής μας. Ανυπομονούμε να σας καλωσορίσουμε στον κόσμο του AnimeGaron και να σας προσφέρουμε μια αξέχαστη εμπειρία!); ");
+            imageView.setImageResource(R.drawable.secondevent);
+        }
     }
 
 }

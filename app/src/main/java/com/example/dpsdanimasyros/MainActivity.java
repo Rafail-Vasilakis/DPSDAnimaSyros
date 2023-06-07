@@ -2,11 +2,17 @@ package com.example.dpsdanimasyros;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+
+import com.example.dpsdanimasyros.adapterclass.ThemesAdapter;
+import com.example.dpsdanimasyros.model.ThemeModel;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
     private Button logobutton;
     private Button backButton;
     private Button settingsbutton;
+    private ArrayList<ThemeModel> themeModels;
+    private AlertDialog.Builder recyclerView;
 
 
     @Override
@@ -43,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
 
         button = findViewById(R.id.choose_second_cat);
         button.setOnClickListener(new View.OnClickListener() {
@@ -78,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, CategoryActivity.class);
+                Intent intent = new Intent(MainActivity.this, MapActivity.class);
                 startActivity(intent);
             }
         });
@@ -121,6 +131,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+
 
     }
 

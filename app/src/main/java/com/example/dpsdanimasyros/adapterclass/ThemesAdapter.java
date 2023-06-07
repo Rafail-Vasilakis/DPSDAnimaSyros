@@ -76,9 +76,14 @@ public class ThemesAdapter extends RecyclerView.Adapter<ThemesAdapter.viewHolder
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, InformationProgramActivity.class);
+                intent.putExtra("Image", image ); // Pass the position of the clicked item
+                intent.putExtra("Title", title ); // Pass the position of the clicked item
+                intent.putExtra("ButtonPressed", position); // Pass the position of the clicked item
                 context.startActivity(intent);
             }
         });
+
+
     }
 
     @Override

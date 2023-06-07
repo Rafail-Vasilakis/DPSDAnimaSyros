@@ -174,17 +174,14 @@ public class CategoryActivity extends AppCompatActivity {
 
 
     @Override
-    protected void onResume()
-    {
+    protected void onResume() {
         themeModels.clear();
-         ImageView backimage;
-         ImageView catimage;
-         TextView cattitle;
-         FrameLayout frameLayout;
-         backimage = findViewById(R.id.main_background);
-         catimage = findViewById(R.id.vector_image_category);
-         cattitle = findViewById(R.id.nameofcategory);
-       //  frameLayout = findViewById(R.id.programeventitem);
+        ImageView backimage;
+        ImageView catimage;
+        TextView cattitle;
+        backimage = findViewById(R.id.main_background);
+        catimage = findViewById(R.id.vector_image_category);
+        cattitle = findViewById(R.id.nameofcategory);
         int buttonPressed = getIntent().getIntExtra("ButtonPressed", -1);
         super.onResume();
         if (buttonPressed == 1) {
@@ -193,23 +190,24 @@ public class CategoryActivity extends AppCompatActivity {
             cattitle.setText("Προβολές");
             cattitle.setText("Προβολές");
             addToFavorites();
-        } else if (buttonPressed == 2){
+        } else if (buttonPressed == 2) {
             backimage.setImageResource(R.drawable.b4);
             catimage.setImageResource(R.drawable.vectoragora);
             cattitle.setText("Αγορά");
             addToFavorites2();
-        } else if (buttonPressed == 3){
+        } else if (buttonPressed == 3) {
             backimage.setImageResource(R.drawable.b8);
             catimage.setImageResource(R.drawable.carbon_educationekp_prog_vector);
             cattitle.setText("Εκπαιδευτικά \nΠρογράμματα");
 
             addToFavorites3();
-        } else if (buttonPressed == 4){
+        } else if (buttonPressed == 4) {
             backimage.setImageResource(R.drawable.b6);
             catimage.setImageResource(R.drawable.ekd_vector);
             cattitle.setText("Παράλληλες \nΕκδηλώσεις");
             addToFavorites4();
         }
+
     }
 
 }
