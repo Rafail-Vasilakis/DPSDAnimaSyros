@@ -26,8 +26,6 @@ import java.util.ArrayList;
 
 public class CategoryActivity extends AppCompatActivity {
 
-    private Button buttoninformation;
-
     private Button logobutton;
     private Button backButton;
 
@@ -186,7 +184,7 @@ public class CategoryActivity extends AppCompatActivity {
          backimage = findViewById(R.id.main_background);
          catimage = findViewById(R.id.vector_image_category);
          cattitle = findViewById(R.id.nameofcategory);
-         frameLayout = findViewById(R.id.programeventitem);
+       //  frameLayout = findViewById(R.id.programeventitem);
         int buttonPressed = getIntent().getIntExtra("ButtonPressed", -1);
         super.onResume();
         if (buttonPressed == 1) {
