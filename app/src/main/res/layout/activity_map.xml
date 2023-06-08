@@ -1,10 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:background="@drawable/b5">
+    <!-- Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"/>
 
-    <org.osmdroid.views.MapView android:id="@+id/map"
+    <org.osmdroid.views.MapView
+        android:id="@+id/map"
         android:layout_width="300dp"
-        android:layout_height="500dp" />
-</LinearLayout>
+        android:layout_height="500dp"
+        android:layout_below="@+id/navigation_bar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="205dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/map"
+        android:layout_marginTop="-205dp">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  1.   ΘΕΑΤΡΟ ΑΠΟΛΛΩΝ / APOLLO THEATRE \n\n  2.   ΠΝΕΥΜΑΤΙΚΟ ΚΕΝΤΡΟ / CULTURAL CENTRE \n\n  3.   ΠΑΛΛΑΣ ΘΕΡΙΝΟΣ ΚΙΝΗΜΑΤΟΓΡΑΦΟΣ / PALLAS OPEN AIR CINEMA \n\n  4.   ΔΗΜΟΤΙΚΗ ΒΙΒΛΙΟΘΗΚΗ / MUNICIPAL LIBRARY \n\n  5.   ΠΛΑΤΕΙΑ ΜΙΑΟΥΛΗ / MIAOULI SQUARE \n\n  6.   ΙΝΣΤΙΤΟΥΤΟ ΚΥΒΕΛΗ / KYVELI INSTITUTE \n\n  7.   ΠΑΝΕΠΙΣΤΗΜΙΟ ΑΙΓΑΙΟΥ / UNIVERSITY OF THE AEGEAN \n\n  8.   ΣΤΑΘΜΟΣ ΚΤΕΛ / LOCAL BUS STATION"
+            android:textAppearance="@style/some_id"
+            android:textSize="20dp"/>
+
+
+    </ScrollView>
+</RelativeLayout>
