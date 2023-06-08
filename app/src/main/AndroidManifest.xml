@@ -37,6 +37,7 @@
         <activity android:name=".InformationProgramActivity" />
         <activity android:name=".FavoritesActivity" />
         <activity android:name=".MapActivity"/>
+        <activity android:name=".RegistrationActivity"/>
     </application>
 
 

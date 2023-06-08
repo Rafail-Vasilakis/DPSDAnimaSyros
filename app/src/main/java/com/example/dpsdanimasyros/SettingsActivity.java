@@ -17,6 +17,8 @@ public class SettingsActivity extends AppCompatActivity {
     private Button terms_button;
     private Button shareButton;
     private Button removeAdsButton;
+
+    private Button add_account;
     // ...
 
     @Override
@@ -43,7 +45,8 @@ public class SettingsActivity extends AppCompatActivity {
             favoritesButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    // Handle favorites button click
+                    Intent intent = new Intent(SettingsActivity.this, FavoritesActivity.class);
+                    startActivity(intent);
                 }
             });
 
@@ -55,6 +58,20 @@ public class SettingsActivity extends AppCompatActivity {
                 }
             });
 
+        // Find the share button in your layout and set a click listener
+        findViewById(R.id.button_share).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create the share intent
+                Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                shareIntent.setType("text/plain");
+                shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Your Subject");
+                shareIntent.putExtra(Intent.EXTRA_TEXT, "Content to share");
+
+                // Start the activity with the share intent
+                startActivity(Intent.createChooser(shareIntent, "Share via"));
+            }
+        });
 
         terms_button = findViewById(R.id.terms_btn);
         terms_button.setOnClickListener(new View.OnClickListener() {
@@ -75,7 +92,18 @@ public class SettingsActivity extends AppCompatActivity {
                 }
             });
 
-            // Add click listeners for other buttons/options
+        add_account = findViewById(R.id.add_account_btn);
+        add_account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SettingsActivity.this, RegistrationActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+
+        // Add click listeners for other buttons/options
 
         }
 }
